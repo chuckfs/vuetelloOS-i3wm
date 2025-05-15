@@ -1,0 +1,3 @@
+(defwidget vault-status []
+  (label :text (sh "if mount | grep -q boner-city; then echo '🔓 Open'; else echo '🔒 Locked'; fi")
+         :class "vault"))

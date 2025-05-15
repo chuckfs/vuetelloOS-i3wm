@@ -1,0 +1,3 @@
+(defwidget clock []
+  (label :text (time "%A %H:%M")
+         :class "clock"))

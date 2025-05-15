@@ -1,0 +1,5 @@
+(defwidget system []
+  (box :orientation "h" :spacing 10
+    (label :text (sh "uptime -p") :class "sysinfo")
+    (label :text (sh "cat /sys/class/power_supply/BAT0/capacity") :class "battery")
+  ))

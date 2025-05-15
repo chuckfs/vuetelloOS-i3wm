@@ -1,0 +1,33 @@
+* {
+  all: unset;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
+  color: #f8f5f2;
+}
+
+.main-container {
+  background-color: rgba(240, 210, 180, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  padding: 20px;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.clock {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffd7ae;
+}
+
+.vault {
+  color: #ff9e8b;
+}
+
+.sysinfo {
+  color: #ddd;
+}
+
+.battery {
+  color: #90ee90;
+}
