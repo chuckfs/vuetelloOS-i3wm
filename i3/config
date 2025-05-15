@@ -1,0 +1,63 @@
+set $mod Mod4
+set $terminal alacritty
+set $browser firefox
+
+exec_always --no-startup-id eww daemon
+exec_always --no-startup-id eww open main
+exec_always --no-startup-id eww ~/bin/vault-open
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
+exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
+exec_always --no-startup-id obsidian ~/boner-city
+
+font pango:JetBrainsMono Nerd Font 12
+
+bindsym $mod+Return exec $terminal
+bindsym $mod+d exec rofi -show durn -theme velluto
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+c reload
+
+bindsym $mod+Left focus Left
+bindsym $mod+Down focus Down
+bindsym $mod+Up focus Up
+bindsym $mod+Right focus Right
+
+bindsym $mod+Shift+Left move Left
+bindsym $mod+Shift+Down move Down
+bindsym $mod+Shift Up move up
+bindsym $mod+Shift+Right move Right
+
+bindsym $mod+f fullscreen toggle
+bindsym $mod+space floating toggle
+bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+e layout toggle split
+
+set $ws1 "www"
+set $ws2 "code"
+set $ws3 "files"
+set $ws4 "chuck"
+
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+
+gaps inner 10
+gaps outer 15
+
+# bar {
+#     status_command i3status
+#    font pango:JetBrainsMono Nerd Font 11
+# }
+
+for_window [class="Pavucontrol"] floating enable
+for_window [class="feh"] floating enable
+for_window [title="chat"] floating enable
+
+bindsym $mod+Shift+Return exec alacritty
